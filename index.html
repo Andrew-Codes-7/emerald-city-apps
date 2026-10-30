@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emerald City Apps — Little apps for everyday life</title>
+<meta name="description" content="Free, simple apps for families, habits, focus, goals, and fun. Coming soon from Emerald City Apps.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#050706">
+<link rel="canonical" href="https://emeraldcityapps.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Emerald City Apps">
+<meta property="og:url" content="https://emeraldcityapps.com/">
+<meta property="og:title" content="Emerald City Apps — Little apps for everyday life">
+<meta property="og:description" content="Free, simple apps for families, habits, focus, goals, and fun. Coming soon.">
+<meta property="og:image" content="https://emeraldcityapps.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Emerald City Apps logo: a green Seattle skyline on an emerald gem">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Emerald City Apps — Little apps for everyday life">
+<meta name="twitter:description" content="Free, simple apps for families, habits, focus, goals, and fun. Coming soon.">
+<meta name="twitter:image" content="https://emeraldcityapps.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --emerald: #12b76a;
+    --emerald-bright: #4ade80;
+    --emerald-dark: #0a8f52;
+    --emerald-deep: #eafff3;
+    --mint: rgba(34, 197, 94, 0.14);
+    --mint-text: #6ee7a0;
+    --ink: #e8f5ee;
+    --muted: #9fb5aa;
+    --bg: #050706;
+    --card: #0b120f;
+    --line: #1c2a23;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 24px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; color: var(--ink); text-decoration: none; }
+  .brand img { width: 40px; height: 40px; border-radius: 8px; }
+  .hero-logo { display: block; width: min(340px, 78vw); height: auto; margin: 0 auto 8px; -webkit-mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, #000 80%, transparent 100%); mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, #000 80%, transparent 100%); }
+  .hero { padding: 16px 0 40px; text-align: center; }
+  .pill { display: inline-block; background: var(--mint); color: var(--mint-text); font-weight: 600; font-size: 13px; padding: 6px 14px; border-radius: 999px; margin-bottom: 20px; }
+  h1 { font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: clamp(34px, 5.5vw, 54px); line-height: 1.08; margin: 0 0 18px; color: var(--ink); letter-spacing: -0.02em; }
+  .lead { font-size: clamp(17px, 2.2vw, 20px); color: var(--muted); max-width: 620px; margin: 0 auto 32px; }
+  form.signup { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+  form.signup input[type=email] { flex: 1 1 240px; padding: 14px 16px; font-size: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--ink); font-family: inherit; }
+  form.signup input[type=email]::placeholder { color: #6b8077; }
+  form.signup input[type=email]:focus { outline: 2px solid var(--emerald); outline-offset: 1px; border-color: transparent; }
+  form.signup button { padding: 14px 22px; font-size: 16px; font-weight: 600; border: 0; border-radius: 10px; background: var(--emerald); color: #03140b; cursor: pointer; font-family: inherit; }
+  form.signup button:hover { background: var(--emerald-bright); }
+  .fine { font-size: 13px; color: var(--muted); margin-top: 12px; }
+  .hidden { display: none; }
+  section.apps { padding: 48px 0 24px; }
+  h2 { font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 28px; text-align: center; margin: 0 0 28px; color: var(--ink); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+  .icon { width: 44px; height: 44px; border-radius: 12px; background: var(--mint); color: var(--emerald-bright); display: grid; place-items: center; margin-bottom: 6px; }
+  .icon svg { width: 24px; height: 24px; }
+  .card h3 { margin: 0; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; flex: 1; }
+  .soon { align-self: flex-start; margin-top: 8px; font-size: 12px; font-weight: 600; color: var(--mint-text); background: var(--mint); padding: 4px 10px; border-radius: 999px; }
+  .story { padding: 48px 0; text-align: center; }
+  .story p { max-width: 600px; margin: 0 auto; color: var(--muted); font-size: 17px; }
+  footer { border-top: 1px solid var(--line); padding: 24px 0 40px; font-size: 14px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  footer a { color: var(--emerald-bright); }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Emerald City Apps home">
+      <img src="/mark.png" alt="" width="40" height="40">
+      Emerald City Apps
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <img class="hero-logo" src="/logo.webp" alt="Emerald City Apps logo" width="720" height="720">
+      <span class="pill">Coming soon</span>
+      <h1>Little apps for<br>everyday life</h1>
+      <p class="lead">Free, simple tools for running your household, building habits, focusing your time, mapping your goals, and having a little fun.</p>
+
+      <form class="signup" name="launch-list" method="POST" data-netlify="true" netlify-honeypot="company" id="signup">
+        <input type="hidden" name="form-name" value="launch-list">
+        <p class="hidden"><label>Leave this empty <input name="company" tabindex="-1" autocomplete="off"></label></p>
+        <label for="email" class="hidden">Email address</label>
+        <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        <button type="submit">Notify me</button>
+      </form>
+      <p class="fine" id="signup-note">Get an email when the first app launches. No spam, ever. <a href="/privacy" style="color:inherit">Privacy</a></p>
+    </div>
+  </section>
+
+  <section class="apps">
+    <div class="wrap">
+      <h2>What we're building</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div>
+          <h3>The Board</h3>
+          <p>One shared home base for your family's chores, events, and to-dos, with a login for everyone in the house.</p>
+          <span class="soon">Coming soon</span>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14"/><path d="M12 17.5v.01"/></svg></div>
+          <h3>Quiz</h3>
+          <p>Quick, fun trivia you can play in a minute and share with friends. Can you beat their score?</p>
+          <span class="soon">Coming soon</span>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></div>
+          <h3>Habit Quest</h3>
+          <p>Turn building good habits into a game, with streaks, rewards, and progress you can see.</p>
+          <span class="soon">Coming soon</span>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></div>
+          <h3>Timebox</h3>
+          <p>Plan your day in focused blocks of time so the important things actually get done.</p>
+          <span class="soon">Coming soon</span>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div>
+          <h3>Mandala Goal Matrix</h3>
+          <p>Break one big goal into smaller goals and action steps on a single visual grid.</p>
+          <span class="soon">Coming soon</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap">
+      <h2>Why "Emerald City"?</h2>
+      <p>It's a nod to Seattle, the hometown where it all started. Now built on the Pacific coast of Costa Rica, every app here is made to help with the small, everyday wins.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr">2026</span> Emerald City Apps · <a href="/privacy">Privacy</a></span>
+    <span>Questions? <a href="mailto:hello@emeraldcityapps.com">hello@emeraldcityapps.com</a></span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const form = document.getElementById('signup');
+  const note = document.getElementById('signup-note');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = form.querySelector('#email');
+    if (!email.value || !email.checkValidity()) {
+      note.textContent = 'Enter a valid email address.';
+      email.focus();
+      return;
+    }
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      });
+      if (!res.ok) throw new Error();
+      form.reset();
+      note.textContent = "You're on the list. We'll email you on launch day.";
+    } catch {
+      note.textContent = "That didn't go through. Try again in a moment.";
+    }
+  });
+</script>
+</body>
+</html>
